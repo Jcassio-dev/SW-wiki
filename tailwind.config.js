@@ -3,7 +3,7 @@ export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
-      'mobile': {'min': '428px'},
+      'mobile': {'min': '280px'},
 
       'tablet': {'min': '768px'},
 
