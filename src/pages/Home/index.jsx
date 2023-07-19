@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { swapi } from "../../services/swapi";
 
 import { Header } from "../../components/Header";
+import { Search } from "../../components/Search";
 
 export function Home() {
   const [data, setData] = useState([]);
@@ -15,16 +16,19 @@ export function Home() {
   },  []);
 
   const filteredPeople = search.length > 0 
-  ? data.filter(data => data.name.includes(search)) 
+  ? data.filter(data => data.name.toLowerCase().includes(search)) 
   : data
 
  return (
     <>
       <Header/>
-      <input type="text" onChange={e => setSearch(e.target.value)}  value={search}className="text-black"/>
-    {
-      filteredPeople.map((people, index) => <h1 key={index} className="">{people.name}</h1>)
-    }
+      <main className="mt-2 px-6 w-full">
+        <Search onChange={e => setSearch(e.target.value.toLowerCase())}  value={search} placeholder="Pesquise o nome do personagem"/>
+        {
+          filteredPeople.map((people, index) => <h1 key={index} className="">{people.name}</h1>)
+        }
+      </main>
+      
     </>
   )
 }
