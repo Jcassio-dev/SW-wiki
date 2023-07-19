@@ -21,7 +21,7 @@ export function Home() {
 
  return (
     <>
-      <Header/>
+      <Header page={2}/>
       <main className="mt-2 px-6 w-full">
         <Search onChange={e => setSearch(e.target.value.toLowerCase())}  value={search} placeholder="Pesquise o nome do personagem"/>
         {
