@@ -30,7 +30,7 @@ export function Starships() {
         :
         <main className="mt-2 px-6 w-full">
         <Search onChange={e => setSearch(e.target.value.toLowerCase())}  value={search} placeholder="Pesquise o nome da nave"/>
-        <div className="w-9/12 grid desktop:grid-cols-2 tablet:grid-cols-2 mobile:grid-cols-1 mx-auto gap-y-2 animate-bottom" >
+        <div className="w-9/12 grid desktop:grid-cols-3 tablet:grid-cols-2 mobile:grid-cols-1 mx-auto gap-y-2 animate-bottom" >
         {
           filteredStarships.map((starship, index) => (
           <ItemCard key={index} 
