@@ -59,7 +59,7 @@ A API é bem simples no geral, foi criada apenas com três métodos para requisi
 #### Clone esse repositório
 
 ```bash
-$ git clone https://github.com/Jcassio-dev/SW-wiki
+$ git clone https://github.com/Jcassio-dev/SW-wiki.git
 ```
 
 #### Acesse a pasta do projeto no terminal/cmd
