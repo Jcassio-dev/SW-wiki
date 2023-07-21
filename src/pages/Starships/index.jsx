@@ -28,12 +28,12 @@ export function Starships() {
       {isFetching ? 
         <Fetching/>
         :
-        <main className="mt-2 px-6 w-full">
-        <div className='w-9/12 mx-auto my-4 flex items-center justify-between animate-left'>
+        <main className="mt-2 desktop:px-40 tablet:px-30 mobile:px-14   w-full">
+        <div className='w-full my-4 flex items-center justify-between animate-left'>
           <h1 className='desktop:text-3xl mobile:text-xl font-bold text-yellow-300'>Naves</h1>
           <Search onChange={e => setSearch(e.target.value.toLowerCase())}  value={search} placeholder="Pesquise o nome da nave"/>
         </div>
-        <div className="w-9/12 grid desktop:grid-cols-3 tablet:grid-cols-2 mobile:grid-cols-1 mx-auto gap-y-2 animate-bottom" >
+        <div className="w-full grid desktop:grid-cols-3 tablet:grid-cols-2 mobile:grid-cols-1 mx-auto gap-y-2 animate-bottom" >
         {
           filteredStarships.map((starship, index) => (
           <ItemCard key={index} 
