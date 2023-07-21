@@ -10,10 +10,10 @@ import { Link } from 'react-router-dom';
 export function Header({page}){
     return(
         <header className="bg-black flex items-center justify-between px-5 py-5 text-white font-medium border-b border-gray-800">
-            <img src={Emblem} alt="Emblema do império galático" className='w-12 h-12'/>
+            <Link to="/"><img src={Emblem} alt="Emblema do império galático" className='w-12 h-12'/></Link>
 
             <nav className='desktop:flex tablet:flex items-center gap-5 mobile:hidden'>
-                <Link to='/' className={`flex items-center gap-1.5 transition duration-300 cursor-pointer hover:text-yellow-300 pb-2 ${page == 1 && 'border-b-4 border-yellow-300 mt-1'}`}>
+                <Link to='/characters' className={`flex items-center gap-1.5 transition duration-300 cursor-pointer hover:text-yellow-300 pb-2 ${page == 1 && 'border-b-4 border-yellow-300 mt-1'}`}>
                     <BsPersonCircle className='text-2xl'/> <p className='mb-1 text-xl'>Personagens</p>
                 </Link>
                 <Link className={`flex items-center gap-1.5 transition duration-300 cursor-pointer hover:text-yellow-300 pb-2 ${page == 2 && 'border-b-4 border-yellow-300'}`}>
