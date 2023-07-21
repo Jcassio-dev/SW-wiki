@@ -1,6 +1,6 @@
 import Emblem from '../../assets/emblem.svg';
 
-import { GiLightSabers } from 'react-icons/gi';
+import { PiPlanet } from 'react-icons/pi';
 import { BsPersonCircle } from 'react-icons/bs';
 import { FaSpaceShuttle } from 'react-icons/fa';
 import { AiOutlineLogin } from 'react-icons/ai';
@@ -17,7 +17,7 @@ export function Header({page}){
                     <BsPersonCircle className='text-2xl'/> <p className='mb-1 text-xl'>Personagens</p>
                 </Link>
                 <Link className={`flex items-center gap-1.5 transition duration-300 cursor-pointer hover:text-yellow-300 pb-2 ${page == 2 && 'border-b-4 border-yellow-300'}`}>
-                    <GiLightSabers className='text-2xl'/> <p className='mb-1 text-xl'>Armas</p>
+                    <PiPlanet className='text-2xl'/> <p className='mb-1 text-xl'>Planetas</p>
                 </Link>
                 <Link to='/starships' className={`flex items-center gap-0.5 transition duration-300 cursor-pointer hover:text-yellow-300 pb-2 ${page == 3 && 'border-b-4 border-yellow-300'}`}>
                     <FaSpaceShuttle className='text-2xl -rotate-90'/> <p className='mb-1 text-xl'>Naves</p>
