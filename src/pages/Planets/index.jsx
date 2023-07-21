@@ -29,7 +29,7 @@ export function Planets() {
       {isFetching ? 
         <Fetching/>
         :
-        <main className="my-4 desktop:px-40 tablet:px-30 mobile:px-14  w-full">
+        <main className="mt-28 mb-3 desktop:px-40 tablet:px-30 mobile:px-14  w-full">
         <div className='w-full my-4 flex items-center justify-between animate-left'>
           <h1 className='desktop:text-3xl mobile:text-xl font-bold text-yellow-300'>Planetas</h1>
           <Search onChange={e => setSearch(e.target.value.toLowerCase())}  value={search} placeholder="Pesquise o nome do planeta"/>
