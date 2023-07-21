@@ -20,7 +20,7 @@ export function Header({page}){
                     <GiLightSabers className='text-2xl'/> <p className='mb-1 text-xl'>Armas</p>
                 </Link>
                 <Link to='/starships' className={`flex items-center gap-0.5 transition duration-300 cursor-pointer hover:text-yellow-300 pb-2 ${page == 3 && 'border-b-4 border-yellow-300'}`}>
-                    <FaSpaceShuttle className='text-2xl -rotate-90'/> <p className='mb-1 text-xl'>Veículos</p>
+                    <FaSpaceShuttle className='text-2xl -rotate-90'/> <p className='mb-1 text-xl'>Naves</p>
                 </Link>
             </nav>
 
