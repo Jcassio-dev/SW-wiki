@@ -1,4 +1,4 @@
-import {PiRocketLaunchBold} from 'react-icons/pi'
+import { PiRocketLaunchBold } from 'react-icons/pi'
 import { useState, useEffect } from "react";
 import { swapi } from "../../services/swapi";
 
