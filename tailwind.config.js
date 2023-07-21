@@ -10,8 +10,24 @@ export default {
       'desktop': {'min': '1024px'},
 
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        left: {
+          '0%': { transform: 'translateX(-100px)', opacity: 0 },
+          '100%': { transform: 'translateX(0)', opacity: 1 },
+        },
+        bottom:{
+          '0%': { transform: 'translateY(100px)', opacity: 0 },
+          '100%': { transform: 'translateY(0)', opacity: 1 },
+        }
+      },
+      animation: {
+        left: 'left 0.3s ease-in-out',
+        bottom: 'bottom 0.3s ease-in-out'
+      }
+    },
   },
   plugins: [],
+
 }
 
