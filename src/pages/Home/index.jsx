@@ -41,6 +41,7 @@ export function Home() {
           section={'Aparência física'}
           info1={`Altura: ${people.height/100} m`}
           info2={`Peso: ${people.mass} kg`}
+          link={`/characterDetails/${index+1}`}
           />
           ))
         }
