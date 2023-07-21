@@ -12,15 +12,15 @@ export function Header({page}){
         <header className="bg-black flex items-center justify-between px-5 py-5 text-white font-medium border-b border-gray-800">
             <Link to="/"><img src={Emblem} alt="Emblema do império galático" className='w-12 h-12'/></Link>
 
-            <nav className='desktop:flex tablet:flex items-center gap-5 mobile:hidden'>
+            <nav className='desktop:flex mobile:flex tablet:flex items-center gap-5'>
                 <Link to='/characters' className={`flex items-center gap-1.5 transition duration-300 cursor-pointer hover:text-yellow-300 pb-2 ${page == 1 && 'border-b-4 border-yellow-300 mt-1'}`}>
-                    <BsPersonCircle className='text-2xl'/> <p className='mb-1 text-xl'>Personagens</p>
+                    <BsPersonCircle className='text-2xl'/> <p className='mb-1 text-xl desktop:block tablet:block mobile:hidden'>Personagens</p>
                 </Link>
                 <Link to='/planets' className={`flex items-center gap-1.5 transition duration-300 cursor-pointer hover:text-yellow-300 pb-2 ${page == 2 && 'border-b-4 border-yellow-300'}`}>
-                    <PiPlanet className='text-2xl'/> <p className='mb-1 text-xl'>Planetas</p>
+                    <PiPlanet className='text-2xl'/> <p className='mb-1 text-xl desktop:block tablet:block mobile:hidden'>Planetas</p>
                 </Link>
                 <Link to='/starships' className={`flex items-center gap-0.5 transition duration-300 cursor-pointer hover:text-yellow-300 pb-2 ${page == 3 && 'border-b-4 border-yellow-300'}`}>
-                    <FaSpaceShuttle className='text-2xl -rotate-90'/> <p className='mb-1 text-xl'>Naves</p>
+                    <FaSpaceShuttle className='text-2xl -rotate-90'/> <p className='mb-1 text-xl desktop:block tablet:block mobile:hidden'>Naves</p>
                 </Link>
             </nav>
 
