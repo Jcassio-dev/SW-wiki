@@ -15,7 +15,7 @@ export function Characters() {
   const [isFetching, setFetching] = useState(true)
   useEffect(() => {
     async function fetchPeople(){
-        await swapi.get(`/people`).then(({data}) => {setData(data.results), setFetching(false), console.log(data)})
+        await swapi.get(`/people/?page=1`).then(({data}) => {setData(data.results), setFetching(false), console.log(data)})
     }
     fetchPeople();
   },  []);
@@ -32,7 +32,7 @@ export function Characters() {
         :
         <main className="mt-2 px-6 w-full">
         <Search onChange={e => setSearch(e.target.value.toLowerCase())}  value={search} placeholder="Pesquise o nome do personagem"/>
-        <div className="w-9/12 grid desktop:grid-cols-2 tablet:grid-cols-2 mobile:grid-cols-1 mx-auto gap-y-2 animate-bottom" >
+        <div className="w-9/12 grid desktop:grid-cols-3 tablet:grid-cols-2 mobile:grid-cols-1 mx-auto gap-y-2 animate-bottom" >
         {
           filteredPeople.map((people, index) => (
           <ItemCard key={index} 
