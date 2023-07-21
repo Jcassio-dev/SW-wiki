@@ -41,7 +41,7 @@ export function StarshipDetails(){
 
     return(
         <>
-        <Header page={2}/>
+        <Header page={3}/>
         {!alredyFetched ? 
             <Fetching/>
             :
