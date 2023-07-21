@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 import { Fetching } from "../../components/Fetching";
 import { Header } from "../../components/Header";
@@ -17,6 +17,7 @@ export function CharacterDetails(){
     const [films, setFilms] = useState([])
 
     const params = useParams();
+    const navigate = useNavigate();
     useEffect(()=>{
         async function fetchDetails(){
             await swapi.get(`/people/${parseInt(params.id)}`).then(({data}) => {setIsFetching(false), setData(data)})
@@ -82,7 +83,7 @@ export function CharacterDetails(){
                         <p>Pariticipou de {films.length}/6 filmes</p>
                 </div>
 
-                
+                <button onClick={() => navigate(-1)} className="flex flex-col items-center justify-center w-full text-2xl mt-2 font-bold underline cursor-pointer"> voltar</button>
             </main>
         }
         </>
