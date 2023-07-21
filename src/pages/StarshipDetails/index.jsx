@@ -61,7 +61,7 @@ export function StarshipDetails(){
                 <h2 className="desktop:text-3xl mobile:text-xl font-bold mt-2 animate-left">Dados adicionais</h2>
                 <div className="flex flex-col items-center justify-center p-5 bg-yellow-300 text-black rounded-md mt-3 animate-right">
                         <h3 className="text-1xl font-bold">Pilotos</h3>
-                        <div className="grid grid-rows-2 grid-flow-col gap-2 mt-1">
+                        <div className="flex flex-col gap-2 h-64 overflow-auto mt-1">
                             {pilots.map((pilot, index) => <p className="desktop:text-xl mobile:text-lg mr-4" key={index}>{pilot}.</p>)}
                         </div>
                 </div>
