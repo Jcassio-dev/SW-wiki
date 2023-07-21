@@ -20,7 +20,7 @@ export function Header({page}){
             <Link to={'/'}><img src={Emblem} alt="Emblema do império galático" className='w-12 h-12'/></Link>
 
             <nav className='desktop:flex mobile:flex tablet:flex items-center gap-5'>
-                <Link to={user ? '/' : 'characters'} className={`flex items-center gap-1.5 transition duration-300 cursor-pointer hover:text-yellow-300 pb-2 ${page == 1 && 'border-b-4 border-yellow-300 mt-1'}`}>
+                <Link to={user ? '/' : '/characters'} className={`flex items-center gap-1.5 transition duration-300 cursor-pointer hover:text-yellow-300 pb-2 ${page == 1 && 'border-b-4 border-yellow-300 mt-1'}`}>
                     <BsPersonCircle className='text-2xl'/> <p className='mb-1 text-xl desktop:block tablet:block mobile:hidden'>Personagens</p>
                 </Link>
                 <Link to='/planets' className={`flex items-center gap-1.5 transition duration-300 cursor-pointer hover:text-yellow-300 pb-2 ${page == 2 && 'border-b-4 border-yellow-300'}`}>
