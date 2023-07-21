@@ -1,10 +1,13 @@
+import {BsPerson} from 'react-icons/bs'
 import { useState, useEffect } from "react";
+
 import { swapi } from "../../services/swapi";
 
 import { Header } from "../../components/Header";
 import { Search } from "../../components/Search";
 import { ItemCard } from "../../components/ItemCard";
 import { Fetching } from "../../components/Fetching";
+
 
 export function Home() {
   const [data, setData] = useState([]);
@@ -33,6 +36,7 @@ export function Home() {
         {
           filteredPeople.map((people, index) => (
           <ItemCard key={index} 
+          icon={BsPerson}
           title={people.name} 
           info1={`Altura: ${people.height/100} m`}
           info2={`Peso: ${people.mass} kg`}

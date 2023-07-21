@@ -1,3 +1,4 @@
+import {PiRocketLaunchBold} from 'react-icons/pi'
 import { useState, useEffect } from "react";
 import { swapi } from "../../services/swapi";
 
@@ -33,6 +34,7 @@ export function Starships() {
         {
           filteredStarships.map((starship, index) => (
           <ItemCard key={index} 
+          icon={PiRocketLaunchBold}
           title={starship.name} 
           info1={`Classe: ${starship.starship_class}`}
           info2={`Custo: ${starship.cost_in_credits} créditos`}
