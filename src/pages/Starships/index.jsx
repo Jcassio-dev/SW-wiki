@@ -39,6 +39,7 @@ export function Starships() {
           section={"Geral"}
           info1={`Classe: ${starship.starship_class}`}
           info2={`Custo: ${starship.cost_in_credits} créditos`}
+          link={`/starshipDetails/${index+2}`}
           />
           ))
         }

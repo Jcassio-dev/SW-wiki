@@ -5,6 +5,7 @@ import { Home } from '../pages/Home';
 import { Planets } from '../pages/Planets';
 import { CharacterDetails } from '../pages/CharacterDetails';
 import { PlanetDetails } from '../pages/PlanetDetails';
+import { StarshipDetails } from '../pages/StarshipDetails';
 
 export function AuthRoutes(){
     return(
@@ -14,6 +15,7 @@ export function AuthRoutes(){
             <Route path="/planets" element={<Planets/>}/>
             <Route path='/characterDetails/:id' element={<CharacterDetails/>}/>
             <Route path='/planetDetails/:id' element={<PlanetDetails/>}/>
+            <Route path='/starshipDetails/:id' element={<StarshipDetails/>}/>
         </Routes>
     )
 }
