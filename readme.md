@@ -14,6 +14,8 @@ Hubbi - Desafio - SW-Wiki
 
 </div>
 <div id="Description">
+ 
+https://github.com/Jcassio-dev/SW-wiki/assets/62391659/b01e0706-4f72-477a-bbf9-9f8dc58165ff
 
 ## Descrição
 
@@ -59,7 +61,7 @@ A API é bem simples no geral, foi criada apenas com três métodos para requisi
 #### Clone esse repositório
 
 ```bash
-$ git clone https://github.com/Jcassio-dev/SW-wiki
+$ git clone https://github.com/Jcassio-dev/SW-wiki.git
 ```
 
 #### Acesse a pasta do projeto no terminal/cmd
