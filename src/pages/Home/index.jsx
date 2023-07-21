@@ -30,8 +30,8 @@ export function Home() {
           filteredPeople.map((people, index) => (
           <ItemCard key={index} 
           title={people.name} 
-          height={people.height}
-          mass={people.mass}
+          info1={`Altura: ${people.height/100} m`}
+          info2={`Peso: ${people.mass} kg`}
           />
           ))
         }

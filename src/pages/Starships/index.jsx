@@ -27,11 +27,11 @@ export function Starships() {
         <Search onChange={e => setSearch(e.target.value.toLowerCase())}  value={search} placeholder="Pesquise o nome do personagem"/>
         <div className="w-9/12 grid desktop:grid-cols-2 tablet:grid-cols-2 mobile:grid-cols-1  place-content-center mx-auto gap-y-2" >
         {
-          filteredStarships.map((people, index) => (
+          filteredStarships.map((starship, index) => (
           <ItemCard key={index} 
-          title={people.name} 
-          height={people.height}
-          mass={people.mass}
+          title={starship.name} 
+          info1={`Classe: ${starship.starship_class}`}
+          info2={`Custo: ${starship.cost_in_credits} créditos`}
           />
           ))
         }
