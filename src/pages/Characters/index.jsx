@@ -7,6 +7,7 @@ import { Header } from "../../components/Header";
 import { Search } from "../../components/Search";
 import { ItemCard } from "../../components/ItemCard";
 import { Fetching } from "../../components/Fetching";
+import axios from 'axios';
 
 
 export function Characters() {
@@ -38,6 +39,7 @@ export function Characters() {
           <ItemCard key={index} 
           icon={BsPerson}
           title={people.name} 
+          section={'Aparência física'}
           info1={`Altura: ${people.height/100} m`}
           info2={`Peso: ${people.mass} kg`}
           />
