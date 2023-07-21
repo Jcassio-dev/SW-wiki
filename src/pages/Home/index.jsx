@@ -4,14 +4,15 @@ import { swapi } from "../../services/swapi";
 import { Header } from "../../components/Header";
 import { Search } from "../../components/Search";
 import { ItemCard } from "../../components/ItemCard";
+import { Fetching } from "../../components/Fetching";
 
 export function Home() {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState('');
-
+  const [isFetching, setFetching] = useState(true)
   useEffect(() => {
     async function fetchPeople(){
-        await swapi.get(`/people`).then(({data}) => {setData(data.results), console.log(data)})
+        await swapi.get(`/people`).then(({data}) => {setData(data.results), setFetching(false), console.log(data)})
     }
     fetchPeople();
   },  []);
@@ -23,9 +24,12 @@ export function Home() {
  return (
     <>
       <Header page={1}/>
-      <main className="mt-2 px-6 w-full">
+      {isFetching ? 
+        <Fetching/>
+        :
+        <main className="mt-2 px-6 w-full">
         <Search onChange={e => setSearch(e.target.value.toLowerCase())}  value={search} placeholder="Pesquise o nome do personagem"/>
-        <div className="w-9/12 grid desktop:grid-cols-2 tablet:grid-cols-2 mobile:grid-cols-1  place-content-center mx-auto gap-y-2" >
+        <div className="w-9/12 grid desktop:grid-cols-2 tablet:grid-cols-2 mobile:grid-cols-1 mx-auto gap-y-2 animate-bottom" >
         {
           filteredPeople.map((people, index) => (
           <ItemCard key={index} 
@@ -37,7 +41,7 @@ export function Home() {
         }
         </div>
       </main>
-      
+      }
     </>
   )
 }
