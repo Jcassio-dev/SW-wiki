@@ -40,6 +40,7 @@ export function Planets() {
           section={'Orbita'}
           info1={`Rotação: ${planeta.rotation_period} horas`}
           info2={`Translação: ${planeta.orbital_period} dias`}
+          link={`/planetDetails/${index+1}`}
           />
           ))
         }
