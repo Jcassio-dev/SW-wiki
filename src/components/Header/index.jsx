@@ -16,7 +16,7 @@ export function Header({page}){
                 <Link to='/characters' className={`flex items-center gap-1.5 transition duration-300 cursor-pointer hover:text-yellow-300 pb-2 ${page == 1 && 'border-b-4 border-yellow-300 mt-1'}`}>
                     <BsPersonCircle className='text-2xl'/> <p className='mb-1 text-xl'>Personagens</p>
                 </Link>
-                <Link className={`flex items-center gap-1.5 transition duration-300 cursor-pointer hover:text-yellow-300 pb-2 ${page == 2 && 'border-b-4 border-yellow-300'}`}>
+                <Link to='/planets' className={`flex items-center gap-1.5 transition duration-300 cursor-pointer hover:text-yellow-300 pb-2 ${page == 2 && 'border-b-4 border-yellow-300'}`}>
                     <PiPlanet className='text-2xl'/> <p className='mb-1 text-xl'>Planetas</p>
                 </Link>
                 <Link to='/starships' className={`flex items-center gap-0.5 transition duration-300 cursor-pointer hover:text-yellow-300 pb-2 ${page == 3 && 'border-b-4 border-yellow-300'}`}>
