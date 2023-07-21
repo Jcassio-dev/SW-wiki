@@ -9,10 +9,12 @@ import axios from "axios";
 
 export function CharacterDetails(){
     const [isFetching, setIsFetching] = useState(true)
-    const [alredyFetched, setAlredyFetched] = useState(false);
+
     const [data, setData] = useState();
+
     const [vehicles, setVehicles] = useState([])
     const [starships, setStarships] = useState([])
+
     const [planet, setPlanet] = useState()
     const [films, setFilms] = useState([])
 
@@ -37,7 +39,7 @@ export function CharacterDetails(){
         async function fetchStarships(){
             setStarships([])
             data.starships.map(async starship => {
-                await axios.get(starship).then(({data}) => {setStarships(prevState => [...prevState, data.name]), setAlredyFetched(true)})
+                await axios.get(starship).then(({data}) => {setStarships(prevState => [...prevState, data.name])})
             })
         }
         function contFilm(){
@@ -54,7 +56,7 @@ export function CharacterDetails(){
     return(
         <>
         <Header page={1}/>
-        {!alredyFetched ? 
+        {isFetching ? 
             <Fetching/>
             :
             <main className="mt-28 desktop:px-40 tablet:px-30 mobile:px-14 w-full">
