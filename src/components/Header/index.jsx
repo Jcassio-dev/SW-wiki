@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 export function Header({page}){
     return(
-        <header className="bg-black flex items-center justify-between px-5 py-5 text-white font-medium border-b border-gray-800">
+        <header className="w-full bg-black flex items-center justify-between px-5 py-5 text-white font-medium border-b border-gray-800 fixed top-0 left-0">
             <Link to="/"><img src={Emblem} alt="Emblema do império galático" className='w-12 h-12'/></Link>
 
             <nav className='desktop:flex mobile:flex tablet:flex items-center gap-5'>
