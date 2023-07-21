@@ -70,7 +70,7 @@ export function StarshipDetails(){
                         <p>Pariticipou de {films.length}/6 filmes</p>
                 </div>
 
-                <button onClick={() => navigate(-1)} className="flex flex-col items-center justify-center w-full text-2xl mt-2 font-bold underline cursor-pointer"> voltar</button>
+                <button onClick={() => navigate(-1)} className="flex flex-col items-center justify-center mb-2 w-full text-2xl mt-2 font-bold underline cursor-pointer"> voltar</button>
             </main>
         }
         </>
