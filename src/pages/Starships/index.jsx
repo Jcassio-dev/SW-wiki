@@ -36,6 +36,7 @@ export function Starships() {
           <ItemCard key={index} 
           icon={PiRocketLaunchBold}
           title={starship.name} 
+          section={"Geral"}
           info1={`Classe: ${starship.starship_class}`}
           info2={`Custo: ${starship.cost_in_credits} créditos`}
           />
